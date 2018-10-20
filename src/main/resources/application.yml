@@ -1,0 +1,35 @@
+server:
+    contextPath: /gandalf-rules
+    port: 8091
+tomcat:
+    ajp:
+        port: 9091
+        remoteauthentication: false
+        #........... AJP is disabled in local machine.....#
+        enable: false
+management:
+    security:
+        enable: false
+spring:
+    application:
+        name: gandalf-rules
+endpoints:
+    enable: true
+    actuator:
+        enable: true
+    info:
+        enable: true
+        id: info
+        sensitive: true
+    logfile:
+        enable: true
+        external-file: logs/gandalf-rules.log
+        sensitive: true
+info:
+    app:
+        contact:
+            email: raudel24@gmail.com
+            name: 'gandalf-rules'
+        description: 'gandalf-rules'
+        name: gandalf-rules
+        version: '@project.version@'
